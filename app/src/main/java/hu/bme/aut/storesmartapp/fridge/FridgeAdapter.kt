@@ -3,6 +3,7 @@ package hu.bme.aut.storesmartapp.fridge
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.annotation.DrawableRes
+import androidx.annotation.VisibleForTesting
 import androidx.recyclerview.widget.RecyclerView
 import hu.bme.aut.storesmartapp.R
 import hu.bme.aut.storesmartapp.data.DateConverters
@@ -13,7 +14,7 @@ import java.util.*
 
 class FridgeAdapter(private val listener: FridgeItemClickListener) :
 RecyclerView.Adapter<FridgeAdapter.FridgeViewHolder>() {
-
+    @VisibleForTesting
     private val items = mutableListOf<FridgeItem>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = FridgeViewHolder(
         FridgeItemListBinding.inflate(LayoutInflater.from(parent.context), parent, false)

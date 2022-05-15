@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import androidx.annotation.VisibleForTesting
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -29,7 +30,9 @@ class FridgeActivity : AppCompatActivity(), FridgeAdapter.FridgeItemClickListene
     private lateinit var binding: ActivityFridgeBinding
 
     private lateinit var database: StoreSmartDatabase
-    private lateinit var adapter: FridgeAdapter
+    @VisibleForTesting()
+    internal lateinit var adapter: FridgeAdapter
+
     private lateinit var  fragmentState: FragmentState
     private lateinit var alarmManager: AlarmManager
     private lateinit var pendingIntent: PendingIntent
