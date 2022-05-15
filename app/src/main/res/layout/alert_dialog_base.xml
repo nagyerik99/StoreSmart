@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="horizontal"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:weightSum="8"
+    android:paddingTop="10dp"
+    android:background="#33B11818">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/alertText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/item_text_style"
+            android:layout_gravity="start"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="@string/delete_all_item" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:paddingTop="10dp">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/alert_icon"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/alertTodo"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                style="@style/item_text_style"
+                android:gravity="center_horizontal"
+                android:textSize="15sp"
+                android:text="Do You Wish to Proceed?"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

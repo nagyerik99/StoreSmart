@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/new_fridge_item_dialog_background"
+    android:orientation="vertical"
+    android:padding="24dip">
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Title"
+        />
+
+    <View
+        android:layout_height="3dp"
+        android:layout_width="match_parent"
+        android:background="@color/black"
+        android:layout_marginBottom="10dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item_text_style"
+        android:text="@string/item_name"/>
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/item_text_style"
+        android:maxLength="40"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/category"
+        style="@style/item_text_style"
+        />
+
+    <Spinner
+        android:id="@+id/spCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        style="@style/item_text_style"
+        android:text="@string/quantity"/>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:orientation="horizontal">
+
+        <NumberPicker
+            android:id="@+id/numofItem"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:scaleY="1.0"
+            android:scaleX="1.0" />
+
+        <Spinner
+            android:id="@+id/uom"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:scaleY="0.8"
+            android:scaleX="0.8"
+            />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        style="@style/item_text_style"
+        android:text="@string/bestbefore"
+        />
+
+    <DatePicker
+        android:id="@+id/bestBefore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/datePicker_style"
+        android:background="#663496AE"
+        android:datePickerMode="calendar"
+        />
+</LinearLayout>

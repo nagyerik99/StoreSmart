@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="2"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:id="@+id/btnFridge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/fridge_inside"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/fridge"
+            android:textColor="#C5CACD"
+            android:background="#80000000"
+            android:textSize="45sp"
+            android:gravity="center"
+            android:textStyle="bold|italic"
+            android:fontFamily="sans-serif"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:id="@+id/btnShop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/shop_cart"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/shop"
+            android:textColor="#C5CACD"
+            android:gravity="center"
+            android:background="#80000000"
+            android:textSize="45sp"
+            android:textStyle="bold|italic"
+            android:fontFamily="sans-serif" />
+
+    </FrameLayout>
+
+</LinearLayout>

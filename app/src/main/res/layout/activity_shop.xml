@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    tools:context=".shop.ShopActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/smartfridge"
+            android:elevation="4dp"
+            android:background="#347E37" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvShop"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/shop_item_list_background"
+        tools:listitem="@layout/shop_item_list" />
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/fab_expand_menu_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        fab:fab_addButtonSize="normal"
+        fab:fab_labelsPosition="left"
+        fab:fab_addButtonPlusIconColor="@color/black"
+        fab:fab_labelStyle="@style/menu_labels_style"
+        android:layout_marginRight="20dp">
+
+        <com.getbase.floatingactionbutton.AddFloatingActionButton
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_addButtonSize="normal"
+            app:fab_plusIconColor="@color/black"
+            fab:fab_title="@string/add_item"
+            />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnDeleteAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_addButtonSize="normal"
+            app:fab_icon="@drawable/delete_icon"
+            app:fab_title="@string/delete_all"
+            />
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnAddToFridge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_addButtonSize="normal"
+            app:fab_icon="@drawable/fridge_icon"
+            app:fab_title="@string/bought_to_fridge"
+            />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
